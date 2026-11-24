@@ -1,0 +1,521 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Laura Seeling UGC Português</title>
+<meta name="description" content="Criadora de conteúdo UGC: vídeos curtos e fotos para marcas de lifestyle, beleza, gastronomia e viagem.">
+<meta property="og:title" content="Laura Seeling · UGC Creator">
+<meta property="og:description" content="Criadora de conteúdo UGC: vídeos curtos e fotos para marcas de lifestyle, beleza, gastronomia e viagem.">
+<meta property="og:type" content="website">
+<style>html{-webkit-text-size-adjust:100%}body{margin:0;font:14px system-ui,-apple-system,"Segoe UI",sans-serif}img{max-width:100%}[hidden]{display:none!important}:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}</style>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,500;0,600;0,700;1,600&family=Figtree:wght@400;500;600&display=swap">
+<style>
+/* Layout: one-page UGC portfolio in the Cool Travelistas identity. Blue hero band with phone frame + boarding pass, then about, services, 9:16 clip rail, photo grid, navy contact card. */
+:root{
+  --bg:#ffffff;
+  --tint:#f1f4ff;       /* lavender section ground */
+  --blue:#4361ee;       /* primary */
+  --pink:#f72585;       /* accent */
+  --navy:#282c4d;       /* secondary */
+  --text:#4a4e57;
+  --head:#282c4d;
+  --line:#dfe4fb;
+  --onblue:#ffffff;
+  --display:"Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --body:"Figtree", system-ui, -apple-system, "Segoe UI", sans-serif;
+  --mono:ui-monospace, "SFMono-Regular", Menlo, monospace;
+  color-scheme:light;
+}
+
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+body{background:var(--bg);color:var(--text);font-family:var(--body);font-size:17px;line-height:1.6}
+.wrap{max-width:1140px;margin:0 auto;padding-left:max(20px,env(safe-area-inset-left,0px));padding-right:max(20px,env(safe-area-inset-right,0px))}
+a{color:inherit}
+a:focus-visible,button:focus-visible{outline:2px solid var(--pink);outline-offset:3px;border-radius:4px}
+h1,h2,h3{font-family:var(--display);font-weight:600;line-height:1.15;text-wrap:balance;margin:0;color:var(--head)}
+p{margin:0;max-width:62ch}
+.eyebrow{font-family:var(--display);font-size:.8rem;font-weight:600;letter-spacing:.06em;color:var(--pink)}
+
+/* nav */
+body::before{content:"";position:fixed;inset:0 0 auto;height:env(safe-area-inset-top,0px);z-index:10;background:var(--bg)}
+header.nav{position:sticky;top:env(safe-area-inset-top,0px);z-index:9;background:color-mix(in srgb,var(--bg) 92%,transparent);backdrop-filter:blur(10px);border-bottom:1px solid var(--line)}
+header.nav .wrap{display:flex;align-items:center;justify-content:space-between;gap:16px;padding-block:14px}
+.logo{font-family:var(--display);font-weight:700;font-size:1.25rem;text-decoration:none;color:var(--head);letter-spacing:-.01em}
+.logo span{color:var(--pink)}
+nav{display:flex;gap:24px;font-size:.95rem;font-weight:500}
+nav a{text-decoration:none;color:var(--text)}
+nav a:hover{color:var(--blue)}
+nav a.lang{font-weight:600;color:var(--pink);border:1px solid var(--pink);border-radius:999px;padding:1px 10px}
+@media (max-width:680px){nav{display:none}}
+.btn{display:inline-flex;align-items:center;gap:8px;padding:12px 24px;border-radius:4px;background:var(--pink);color:#fff;text-decoration:none;font-family:var(--body);font-weight:500;font-size:1rem;border:1px solid var(--pink);cursor:pointer}
+.btn:hover{filter:brightness(1.08)}
+.btn.outline{background:transparent;color:var(--pink)}
+.btn.light{background:transparent;color:var(--onblue);border-color:rgba(255,255,255,.6)}
+
+/* hero */
+.hero{background:var(--blue);color:var(--onblue);position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:520px;height:520px;border-radius:50%;right:-160px;top:-180px;background:var(--pink);opacity:.25}
+.hero .wrap{position:relative;display:grid;grid-template-columns:1.2fr .8fr;gap:clamp(28px,5vw,64px);align-items:center;padding-block:clamp(44px,7vw,88px)}
+@media (max-width:860px){.hero .wrap{grid-template-columns:1fr}}
+.hero .eyebrow{color:#ffd1e6}
+.hero h1{color:var(--onblue);font-size:clamp(2.6rem,7vw,4.6rem);font-weight:700;letter-spacing:-.02em;margin-top:10px}
+.hero h1 em{font-style:italic;color:#ffd1e6}
+.hero .intro{margin-top:18px;font-size:1.1rem;color:rgba(255,255,255,.9)}
+.hero .ctas{margin-top:28px;display:flex;flex-wrap:wrap;gap:12px}
+
+/* boarding pass */
+.pass{margin-top:34px;display:grid;grid-template-columns:repeat(5,auto);background:var(--bg);color:var(--head);border-radius:10px;overflow:hidden;max-width:580px;box-shadow:0 18px 40px -24px rgba(13,15,36,.6)}
+.pass>div{padding:12px 16px;border-right:1px dashed var(--line);min-width:0}
+.pass>div:last-child{border-right:0}
+.pass small{display:block;font-family:var(--mono);font-size:.64rem;letter-spacing:.1em;text-transform:uppercase;color:var(--text)}
+.pass strong{display:block;font-family:var(--mono);font-size:.98rem;font-weight:600;font-variant-numeric:tabular-nums}
+.pass .hl{color:var(--pink)}
+@media (max-width:560px){.pass{grid-template-columns:1fr 1fr}.pass>div{border-bottom:1px dashed var(--line)}.pass>div:nth-child(2n){border-right:0}}
+
+/* phone */
+.phone{justify-self:center;width:min(290px,100%);aspect-ratio:9/16;max-width:100%;border-radius:36px;padding:10px;background:var(--navy);box-shadow:0 30px 60px -28px rgba(13,15,36,.7);transform:rotate(3deg)}
+.phone .screen{width:100%;height:100%;border-radius:28px;overflow:hidden;position:relative}
+.phone .handle{position:absolute;left:14px;top:16px;font-family:var(--display);font-weight:600;font-size:.8rem;color:#fff;background:rgba(0,0,0,.25);padding:4px 10px;border-radius:999px}
+.phone .tag{position:absolute;left:14px;bottom:16px;right:14px;color:#fff;font-size:.82rem;line-height:1.4}
+.phone .tag b{display:block;font-family:var(--display);font-size:1.15rem;font-weight:600}
+
+/* placeholders — swap each .ph for <img src="..." alt=""> or <video> */
+.ph{background:linear-gradient(160deg,var(--g1),var(--g2));position:relative}
+.ph[data-label]::after{content:attr(data-label);position:absolute;right:10px;bottom:10px;font-family:var(--mono);font-size:.62rem;letter-spacing:.08em;text-transform:uppercase;color:rgba(255,255,255,.9);background:rgba(0,0,0,.25);padding:3px 7px;border-radius:5px}
+.g1{--g1:#7b8cff;--g2:#4361ee}
+.g2{--g1:#ff8ac0;--g2:#f72585}
+.g3{--g1:#4361ee;--g2:#282c4d}
+.g4{--g1:#bcc8ff;--g2:#7b8cff}
+.g5{--g1:#f72585;--g2:#4361ee}
+.g6{--g1:#ffc2dd;--g2:#ff6aa9}
+
+/* sections */
+section.block{padding-block:clamp(56px,8vw,96px)}
+section.tinted{background:var(--tint)}
+.head{display:flex;flex-wrap:wrap;justify-content:space-between;align-items:flex-end;gap:16px 32px;margin-bottom:36px}
+.head h2{font-size:clamp(2rem,4.5vw,3rem);margin-top:6px;color:var(--blue)}
+.head p{color:var(--text)}
+
+/* about */
+.about{display:grid;grid-template-columns:.8fr 1.2fr;gap:clamp(28px,5vw,64px);align-items:center}
+@media (max-width:820px){.about{grid-template-columns:1fr}}
+.about .portrait{width:100%;object-fit:cover;display:block;aspect-ratio:4/5;border-radius:16px;max-width:100%;box-shadow:16px 16px 0 var(--pink)}
+.about .text{display:grid;gap:16px;min-width:0}
+.about h2{font-size:clamp(2rem,4.5vw,3rem);color:var(--blue)}
+.about .lead{font-size:1.2rem;color:var(--head);font-weight:500}
+.about .handle{color:var(--pink);font-weight:600}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;margin-top:8px}
+.facts div{background:var(--tint);border-radius:10px;padding:14px 16px}
+.facts small{display:block;font-size:.75rem;font-weight:600;color:var(--pink)}
+.facts strong{font-weight:500;color:var(--head)}
+@media (max-width:560px){.facts{grid-template-columns:1fr}}
+
+/* services */
+.services{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+@media (max-width:900px){.services{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:520px){.services{grid-template-columns:1fr}}
+.svc{background:var(--bg);border-radius:14px;padding:24px;display:grid;gap:10px;align-content:start}
+.svc h3{font-size:1.15rem}
+.svc p{font-size:.95rem}
+.svc .ic{width:44px;height:44px;border-radius:50%;display:grid;place-items:center;background:var(--blue);color:#fff}
+.svc .ic svg{width:21px;height:21px;fill:none;stroke:currentColor;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.places{margin-top:26px;display:flex;flex-wrap:wrap;gap:10px}
+.places span{border:1px solid var(--pink);color:var(--pink);border-radius:999px;padding:6px 14px;font-size:.9rem;font-weight:500}
+
+/* process */
+.steps{list-style:none;margin:0;padding:0;display:grid;grid-template-columns:repeat(5,1fr);gap:16px;counter-reset:s}
+@media (max-width:900px){.steps{grid-template-columns:1fr 1fr}}
+@media (max-width:520px){.steps{grid-template-columns:1fr}}
+.steps li{display:grid;gap:8px;align-content:start;padding-top:16px;border-top:3px solid var(--blue)}
+.steps li span{font-family:var(--display);font-weight:700;font-size:1.6rem;color:var(--pink);line-height:1}
+.steps h3{font-size:1.05rem}
+.steps p{font-size:.92rem}
+
+/* clips */
+.rail{display:grid;grid-auto-flow:column;grid-auto-columns:minmax(200px,1fr);gap:16px;overflow-x:auto;padding-bottom:12px;scroll-snap-type:x mandatory}
+.clip{scroll-snap-align:start;display:grid;gap:8px;text-decoration:none}
+.clip .ph{aspect-ratio:9/16;border-radius:18px;max-width:100%}
+.clip .play{position:absolute;inset:0;margin:auto;width:54px;height:54px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center}
+.clip .play::before{content:"";border-left:15px solid var(--pink);border-top:9px solid transparent;border-bottom:9px solid transparent;margin-left:4px}
+.clip h3{font-size:1.02rem}
+.clip p{font-size:.88rem}
+.clip:hover h3{color:var(--blue)}
+
+/* gallery */
+.gallery{display:grid;grid-template-columns:repeat(4,1fr);grid-auto-rows:180px;gap:12px}
+.gallery .ph{border-radius:12px}
+.gallery .tall{grid-row:span 2}
+.gallery .wide{grid-column:span 2}
+@media (max-width:760px){.gallery{grid-template-columns:repeat(2,1fr);grid-auto-rows:150px}}
+
+/* contact */
+.contact{background:var(--navy);color:#fff;border-radius:20px;padding:clamp(32px,6vw,64px);display:grid;grid-template-columns:1.2fr .8fr;gap:32px;align-items:end}
+@media (max-width:820px){.contact{grid-template-columns:1fr}}
+.contact h2{color:#fff;font-size:clamp(2.2rem,5.5vw,3.6rem)}
+.contact h2 em{color:var(--pink)}
+.contact p{color:rgba(255,255,255,.8);margin-top:14px}
+.mail{display:grid;gap:12px;min-width:0}
+.mail .addr{font-family:var(--mono);font-size:clamp(.95rem,2vw,1.08rem);padding:14px 16px;border-radius:8px;border:1px solid rgba(255,255,255,.25);word-break:break-all;user-select:all}
+.mail .row{display:flex;flex-wrap:wrap;gap:10px}
+.copied{font-size:.85rem;color:#ffd1e6;min-height:1.2em}
+
+/* media */
+.phone .screen video{width:100%;height:100%;object-fit:cover;display:block;background:var(--navy)}
+.clip{margin:0}
+.clip video{width:100%;aspect-ratio:9/16;max-width:100%;object-fit:cover;border-radius:18px;background:var(--navy);display:block}
+.clip figcaption{display:grid;gap:2px}
+.head p a{color:var(--pink);font-weight:600}
+.gallery{grid-auto-rows:auto!important}
+.gallery img{width:100%;aspect-ratio:3/4;object-fit:cover;border-radius:12px;display:block}
+
+
+/* full-bleed video hero */
+.hero-video{background:var(--navy);min-height:min(82vh,760px);display:flex;align-items:flex-end}
+.hero-video::before{display:none}
+.hero-bg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:60% 50%}
+.hero-shade{position:absolute;inset:0;background:linear-gradient(90deg,rgba(40,44,77,.88) 0%,rgba(40,44,77,.5) 42%,rgba(40,44,77,0) 75%),linear-gradient(0deg,rgba(40,44,77,.55),rgba(40,44,77,0) 45%)}
+@media (max-width:860px){.hero-shade{background:linear-gradient(0deg,rgba(40,44,77,.92) 0%,rgba(40,44,77,.7) 55%,rgba(40,44,77,.25) 100%)}}
+.hero-video .wrap{width:100%;grid-template-columns:minmax(0,640px);z-index:1}
+.hero-video .eyebrow,.hero-video .tagline{color:#ffd1e6}
+.hero-video .pass{background:rgba(255,255,255,.96)}
+.hero-video .pass small,.hero-video .pass strong{color:#282c4d}
+.sound{position:absolute;z-index:2;right:max(16px,env(safe-area-inset-right,0px));bottom:16px;padding:8px 14px;border-radius:999px;border:1px solid rgba(255,255,255,.5);background:rgba(40,44,77,.5);color:#fff;font:500 .85rem var(--body);cursor:pointer}
+@media (max-width:860px){.sound{bottom:auto;top:14px}}
+
+/* v5 additions */
+.case{display:grid;grid-template-columns:1.1fr 1fr;gap:28px 40px;align-items:center;background:var(--blue);color:#fff;border-radius:20px;padding:clamp(24px,4vw,44px)}
+@media (max-width:820px){.case{grid-template-columns:1fr}}
+.case-intro{display:grid;gap:12px;min-width:0}
+.case .eyebrow{color:#ffd1e6}
+.case h3{color:#fff;font-size:clamp(1.6rem,3.6vw,2.4rem)}
+.case p{color:rgba(255,255,255,.9)}
+.case-side{display:grid;gap:14px;min-width:0}
+.case-stats{margin:0;display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.case-stats.one{grid-template-columns:1fr}
+.stat-label{margin:4px 0 -6px;font-size:.78rem;font-weight:600;letter-spacing:.08em;text-transform:uppercase;color:#ffd1e6}
+.proof{margin:0;display:grid;gap:6px}
+.proof img{width:100%;border-radius:12px;display:block;background:#fff}
+.proof figcaption{font-size:.82rem;color:#ffd1e6}
+.case-stats div{background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);border-radius:14px;padding:12px 16px;min-width:0}
+.case-stats dt{font-size:.8rem;font-weight:600;letter-spacing:.06em;text-transform:uppercase;color:#ffd1e6}
+.case-stats dd{margin:4px 0 0;font-family:var(--display);font-weight:700;font-size:clamp(1.25rem,2.6vw,1.7rem);font-variant-numeric:tabular-nums}
+
+.grid-clips.four{grid-template-columns:repeat(4,1fr);max-width:none}
+@media (max-width:900px){.grid-clips.four{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:460px){.grid-clips.four{grid-template-columns:1fr}}
+.logo small{display:block;font-family:var(--body);font-weight:500;font-size:.72rem;color:var(--pink);letter-spacing:.02em}
+.hero h1.name{font-size:clamp(3rem,9vw,6rem);line-height:1;letter-spacing:-.03em}
+.hero .tagline{margin-top:14px;font-family:var(--display);font-weight:600;font-size:clamp(1.15rem,2.4vw,1.5rem);color:#ffd1e6}
+.badge{display:inline-flex;align-items:center;gap:8px;margin-top:20px;padding:7px 14px;border-radius:999px;background:rgba(255,255,255,.14);border:1px solid rgba(255,255,255,.35);font-size:.9rem;font-weight:500}
+.badge::before{content:"";width:8px;height:8px;border-radius:50%;background:var(--pink)}
+.filmed{background:var(--navy);color:#fff}
+.filmed .wrap{display:flex;flex-wrap:wrap;align-items:center;gap:10px 28px;padding-block:20px}
+.filmed small{font-family:var(--display);font-weight:600;font-size:.78rem;letter-spacing:.08em;text-transform:uppercase;color:#ffd1e6}
+.filmed ul{list-style:none;margin:0;padding:0;display:flex;flex-wrap:wrap;gap:8px 24px;font-family:var(--display);font-weight:600}
+.filmed li.you{color:var(--pink);font-style:italic}
+.cat{margin-top:40px}
+.cat:first-of-type{margin-top:0}
+.cat h3.cat-title{font-size:1.3rem;color:var(--head);margin-bottom:16px;display:flex;align-items:center;gap:12px}
+.cat h3.cat-title::after{content:"";flex:1;height:1px;background:var(--line)}
+.grid-clips{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;max-width:900px}
+@media (max-width:900px){.grid-clips{grid-template-columns:repeat(2,1fr)}}
+@media (max-width:460px){.grid-clips{grid-template-columns:1fr}}
+.clip dl{margin:0;display:grid;gap:4px;font-size:.86rem}
+.clip dt{font-weight:600;color:var(--pink);display:inline}
+.clip dd{margin:0;display:inline}
+.clip dl div{line-height:1.45}
+.framework{display:grid;grid-template-columns:repeat(5,1fr);gap:14px;list-style:none;margin:0;padding:0}
+@media (max-width:900px){.framework{grid-template-columns:1fr 1fr}}
+@media (max-width:460px){.framework{grid-template-columns:1fr}}
+.framework li{background:var(--bg);border-radius:14px;padding:20px;display:grid;gap:6px;align-content:start}
+.framework b{font-family:var(--display);font-size:.8rem;color:var(--pink)}
+.framework h3{font-size:1.2rem}
+.framework p{font-size:.92rem}
+.compare{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+@media (max-width:720px){.compare{grid-template-columns:1fr}}
+.compare>div{border-radius:16px;padding:26px;display:grid;gap:14px;align-content:start}
+.compare .yes{background:var(--blue);color:#fff}
+.compare .no{background:var(--tint)}
+.compare h3{font-size:1.25rem}
+.compare .yes h3{color:#fff}
+.compare ul{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.compare li{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start}
+.compare .yes li::before{content:"✓";font-weight:700;color:#ffd1e6}
+.compare .no li::before{content:"✕";font-weight:700;color:var(--pink)}
+.why{display:grid;grid-template-columns:1fr 1fr;gap:18px;margin-top:28px}
+@media (max-width:720px){.why{grid-template-columns:1fr}}
+.why ul{margin:0;padding-left:1.1em;display:grid;gap:6px}
+.why>div{background:var(--tint);border-radius:14px;padding:22px}
+.why h3{font-size:1.1rem;margin-bottom:10px}
+.packs{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+@media (max-width:860px){.packs{grid-template-columns:1fr}}
+.pack{background:var(--bg);border-radius:16px;padding:26px;display:grid;gap:14px;align-content:start;border:1px solid var(--line)}
+.pack.feat{border:2px solid var(--pink)}
+.pack .kicker{font-family:var(--display);font-weight:600;font-size:.78rem;letter-spacing:.06em;text-transform:uppercase;color:var(--pink)}
+.pack h3{font-size:1.35rem}
+.pack ul{margin:0;padding-left:1.1em;display:grid;gap:6px}
+.pack .note{font-size:.88rem}
+.packs-foot{margin-top:22px;display:flex;flex-wrap:wrap;align-items:center;gap:14px 24px}
+.steps-compact{list-style:none;margin:28px 0 0;padding:0;display:flex;flex-wrap:wrap;gap:10px}
+.steps-compact li{background:var(--bg);border:1px solid var(--line);border-radius:999px;padding:8px 16px;font-size:.92rem}
+.steps-compact b{color:var(--pink);margin-right:6px}
+
+footer{background:var(--tint);padding-block:32px;font-size:.9rem}
+footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;color:var(--blue)}
+</style>
+
+</head>
+<body>
+<header class="nav">
+  <div class="wrap">
+    <a class="logo" href="#top">Laura Seeling<small>IG @lauraseeling · TikTok @uhstudioss</small></a>
+    <nav aria-label="Seções">
+      <a href="#about">Sobre mim</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#framework">Como eu crio</a>
+      <a href="#packages">Pacotes</a>
+      <a href="#contact">Contato</a>
+      <a class="lang" href="../" hreflang="en">EN</a>
+    </nav>
+    <a class="btn" href="#contact">Pedir orçamento</a>
+  </div>
+</header>
+
+<main id="top">
+  <section class="hero hero-video">
+    <video class="hero-bg" src="../../video/hero.mp4" poster="../../img/hero.jpg" autoplay muted loop playsinline aria-hidden="true"></video>
+    <div class="hero-shade" aria-hidden="true"></div>
+    <button class="sound" id="heroToggle" type="button">Pausar vídeo</button>
+    <div class="wrap">
+      <div>
+        <p class="eyebrow">Criadora de conteúdo UGC · Lifestyle, beleza, gastronomia e viagem</p>
+        <h1 class="name">Laura Seeling</h1>
+        <p class="tagline">Conteúdo real que dá vontade de experimentar a sua marca.</p>
+        <div class="ctas">
+          <a class="btn" href="#portfolio">Ver portfólio</a>
+          <a class="btn light" href="#contact">Vamos conversar</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="about">
+    <div class="wrap about">
+      <img class="portrait" src="../../g/laura.jpg" alt="Laura Seeling sorrindo em frente a uma vista de montanhas verdes">
+      <div class="text">
+        <p class="eyebrow">Sobre mim</p>
+        <h2>Oi, eu sou a Laura!</h2>
+        <p class="lead">Sou criadora de conteúdo UGC do Rio de Janeiro e crio para marcas de lifestyle, beleza, gastronomia e viagem. Já passei por 27 países e há pouco tempo comecei a postar no <span class="handle">@uhstudioss</span>, no TikTok. Amo shows, eventos, restaurantes novos e conhecer lugares, pessoas e culturas diferentes.</p>
+        <p>Trabalho com marketing há 5 anos e sou formada em Administração, com pós em Marketing. Também tenho duas marcas de viagem: a UH Travel, minha agência no Rio que monta roteiros sob medida para quem vem conhecer o Brasil, e o Cool Travelistas, um blog com dicas de viagem para mulheres viajantes.</p>
+        <p>Passei a me dedicar ao UGC para juntar storytelling e marketing em marcas que eu admiro.</p>
+        <div class="facts">
+          <div><small>Onde estou</small><strong>Nômade digital</strong></div>
+          <div><small>Experiência</small><strong>5 anos de marketing</strong></div>
+          <div><small>Idiomas</small><strong>PT · EN · FR</strong></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="portfolio" style="border-top:1px solid var(--line)">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Portfólio</p><h2>Vídeos UGC</h2></div>
+        <p>Cada vídeo nasce de uma estratégia. Clique para assistir. <a href="https://www.tiktok.com/@uhstudioss" target="_blank" rel="noopener">Veja mais no TikTok</a></p>
+      </div>
+
+      <div class="cat">
+        <h3 class="cat-title">Lifestyle e moda</h3>
+        <div class="grid-clips four">
+          <figure class="clip"><video src="../../video/arpoador_v2.mp4" poster="../../img/arpoador_v2.jpg" controls preload="none" playsinline></video><figcaption><h3>Hotel Arpoador · Rio de Janeiro</h3><dl><div><dt>Estilo: </dt><dd>Vlog</dd></div><div><dt>Formato: </dt><dd>Depoimento</dd></div></dl></figcaption></figure>
+          <figure class="clip"><video src="../../video/bikini.mp4" poster="../../img/bikini.jpg" controls preload="none" playsinline></video><figcaption><h3>Biquíni</h3><dl><div><dt>Estilo: </dt><dd>B-roll</dd></div><div><dt>Formato: </dt><dd>Demonstração</dd></div></dl></figcaption></figure>
+          <figure class="clip"><video src="../../video/suitcase_v2.mp4" poster="../../img/suitcase_v2.jpg" controls preload="none" playsinline></video><figcaption><h3>Mala de viagem</h3><dl><div><dt>Estilo: </dt><dd>Falando para a câmera</dd></div><div><dt>Formato: </dt><dd>Review</dd></div></dl></figcaption></figure>
+          <figure class="clip"><video src="../../video/costa_brava.mp4" poster="../../img/costa_brava.jpg" controls preload="none" playsinline></video><figcaption><h3>Costa Brava Clube</h3><dl><div><dt>Estilo: </dt><dd>Voiceover em português</dd></div><div><dt>Formato: </dt><dd>Review</dd></div></dl></figcaption></figure>
+        </div>
+      </div>
+
+      <div class="cat">
+        <h3 class="cat-title">Beleza e bem-estar</h3>
+        <div class="grid-clips four">
+          <figure class="clip"><video src="../../video/selftan.mp4" poster="../../img/selftan.jpg" controls preload="none" playsinline></video><figcaption><h3>Autobronzeador</h3><dl><div><dt>Estilo: </dt><dd>Falando para a câmera</dd></div><div><dt>Formato: </dt><dd>Tutorial</dd></div></dl></figcaption></figure>
+          <figure class="clip"><video src="../../video/kempinski.mp4" poster="../../img/kempinski.jpg" controls preload="none" playsinline></video><figcaption><h3>Spa do Kempinski</h3><dl><div><dt>Estilo: </dt><dd>B-roll com música</dd></div><div><dt>Formato: </dt><dd>Demonstração</dd></div></dl></figcaption></figure>
+        </div>
+      </div>
+
+      <div class="cat">
+        <h3 class="cat-title">Gastronomia</h3>
+        <div class="grid-clips four">
+          <figure class="clip"><video src="../../video/madame_bardot.mp4" poster="../../img/madame_bardot.jpg" controls preload="none" playsinline></video><figcaption><h3>Madame Bardot · Búzios</h3><dl><div><dt>Estilo: </dt><dd>Voiceover em inglês</dd></div><div><dt>Formato: </dt><dd>Review</dd></div></dl></figcaption></figure>
+          <figure class="clip"><video src="../../video/casa_da_velha_bruxa.mp4" poster="../../img/casa_da_velha_bruxa.jpg" controls preload="none" playsinline></video><figcaption><h3>Casa da Velha Bruxa</h3><dl><div><dt>Estilo: </dt><dd>Voiceover em português</dd></div><div><dt>Formato: </dt><dd>Review</dd></div></dl></figcaption></figure>
+          <figure class="clip"><video src="../../video/mug.mp4" poster="../../img/mug.jpg" controls preload="none" playsinline></video><figcaption><h3>Mug · Faria Lima, São Paulo</h3><dl><div><dt>Estilo: </dt><dd>Voiceover em inglês</dd></div><div><dt>Formato: </dt><dd>Review</dd></div></dl></figcaption></figure>
+          <figure class="clip"><video src="../../video/maracuja.mp4" poster="../../img/maracuja.jpg" controls preload="none" playsinline></video><figcaption><h3>Maracujá Cozinha Afetiva · São Paulo</h3><dl><div><dt>Estilo: </dt><dd>B-roll com música</dd></div><div><dt>Formato: </dt><dd>Demonstração</dd></div></dl></figcaption></figure>
+        </div>
+      </div>
+
+      <div class="cat">
+        <h3 class="cat-title">Viagem e hospedagem</h3>
+        <div class="grid-clips four">
+          <figure class="clip"><video src="../../video/melia_dunas.mp4" poster="../../img/melia_dunas.jpg" controls preload="none" playsinline></video><figcaption><h3>Meliá Dunas Beach Resort · Cabo Verde</h3><dl><div><dt>Estilo: </dt><dd>Voiceover em inglês</dd></div><div><dt>Formato: </dt><dd>Review</dd></div></dl></figcaption></figure>
+          <figure class="clip"><video src="../../video/joa_glass_house.mp4" poster="../../img/joa_glass_house.jpg" controls preload="none" playsinline></video><figcaption><h3>Casa de vidro no Joá · Rio</h3><dl><div><dt>Estilo: </dt><dd>Texto na tela</dd></div><div><dt>Formato: </dt><dd>Demonstração</dd></div></dl></figcaption></figure>
+          <figure class="clip"><video src="../../video/buzios.mp4" poster="../../img/buzios.jpg" controls preload="none" playsinline></video><figcaption><h3>Casa no Airbnb · Búzios</h3><dl><div><dt>Estilo: </dt><dd>B-roll com música</dd></div><div><dt>Formato: </dt><dd>Demonstração</dd></div></dl></figcaption></figure>
+          <figure class="clip"><video src="../../video/sal_tour_v2.mp4" poster="../../img/sal_tour_v2.jpg" controls preload="none" playsinline></video><figcaption><h3>Passeio pela ilha · Sal, Cabo Verde</h3><dl><div><dt>Estilo: </dt><dd>Voiceover em inglês</dd></div><div><dt>Formato: </dt><dd>Review</dd></div></dl></figcaption></figure>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="block tinted" id="framework">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Meu método</p><h2>Não basta ser bonito, tem que dar resultado.</h2></div>
+        <p>Todo vídeo segue uma estrutura pensada para transformar atenção em ação.</p>
+      </div>
+      <ol class="framework">
+        <li><b>01</b><h3>Hook</h3><p>Prende a atenção logo nos primeiros segundos, com o momento mais impactante.</p></li>
+        <li><b>02</b><h3>Contexto</h3><p>Mostra o momento, a necessidade ou o lugar, e para quem é.</p></li>
+        <li><b>03</b><h3>Experiência</h3><p>Mostra o uso de verdade: como é, como fica e como funciona.</p></li>
+        <li><b>04</b><h3>Destaque</h3><p>Valoriza o detalhe que faz a sua marca ser única.</p></li>
+        <li><b>05</b><h3>CTA</h3><p>Diz o que fazer em seguida: salvar, comprar, reservar ou visitar.</p></li>
+      </ol>
+    </div>
+  </section>
+
+  <section class="block" id="gallery">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Fotos UGC</p><h2>Na vida real</h2></div>
+        <p>Fotos reais e espontâneas, para quem vê se imaginar usando o seu produto ou vivendo a experiência.</p>
+      </div>
+      <div class="gallery">
+        <img src="../../g/p2.jpg" alt="Laura Seeling ao pôr do sol na piscina com um drink, sob um coqueiro" loading="lazy">
+        <img src="../../g/n1.jpg" alt="Dois drinks numa mesa branca à beira da piscina de um hotel branco" loading="lazy">
+        <img src="../../g/n7.jpg" alt="Praia de resort no Mar Vermelho com coqueiros, guarda-sóis e barcos" loading="lazy">
+        <img src="../../g/p1.jpg" alt="Quarto de hotel com luz suave, luminária pendente e armário espelhado" loading="lazy">
+        <img src="../../g/n3.jpg" alt="Laura Seeling no deck de madeira da piscina, sob um guarda-sol de palha" loading="lazy">
+        <img src="../../g/n2.jpg" alt="Risoto de cogumelos numa mesa de restaurante de frente para o mar" loading="lazy">
+        <img src="../../g/n9.jpg" alt="Cabana de treliça de madeira com um arco emoldurando o jardim do resort" loading="lazy">
+        <img src="../../g/n12.jpg" alt="Espreguiçadeiras num terraço sobre uma baía azul-turquesa com barcos e ilhas" loading="lazy">
+        <img src="../../g/p3.jpg" alt="Laura Seeling tomando um drink na piscina do resort à noite" loading="lazy">
+        <img src="../../g/n4.jpg" alt="Piscina de uma casa com rede, lavanda e um morro verde" loading="lazy">
+        <img src="../../g/n6.jpg" alt="Deck da piscina com espreguiçadeiras sob grandes nuvens de verão" loading="lazy">
+        <img src="../../g/n13.jpg" alt="Pão e taça de vinho numa mesa de café enquanto um ciclista passa" loading="lazy">
+      </div>
+    </div>
+  </section>
+
+  <section class="block tinted" id="brands">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Case · Minhas marcas</p><h2>Eu conheço os dois lados: o da marca e o do cliente.</h2></div>
+        <p>Como dona de negócio, sei o que uma marca espera do conteúdo. Como cliente, sei o que me faz parar de rolar o feed e agir. Levo esses dois olhares para cada vídeo que faço para você.</p>
+      </div>
+      <article class="case">
+        <div class="case-intro">
+          <p class="eyebrow">Case · UH Travel</p>
+          <h3>De 0 a 1.500 seguidores em 3 meses</h3>
+          <p>A UH Travel é minha agência no Rio de Janeiro: montamos roteiros sob medida e reservamos ingressos para quem vem conhecer o Brasil. Criei o perfil da agência do zero e produzi todo o conteúdo.</p>
+          <p>Como falo com viajantes todos os dias, eu sabia exatamente o que eles perguntam antes de fechar uma viagem. Transformei essas dúvidas em vídeos curtos, e o conteúdo conectou com o público. O perfil chegou a 1.500 seguidores nos primeiros 3 meses, e desde então os vídeos já somam 1,4 milhão de visualizações e mais de 26 mil compartilhamentos.</p>
+          <a class="btn light" style="justify-self:start" href="https://www.tiktok.com/@uhtravelbrazil" target="_blank" rel="noopener">Veja no TikTok @uhtravelbrazil</a>
+        </div>
+        <div class="case-side">
+          <p class="stat-label">Primeiros 3 meses</p>
+          <dl class="case-stats one">
+            <div><dt>Seguidores</dt><dd>0 → 1.500</dd></div>
+          </dl>
+          <p class="stat-label">Totais da conta</p>
+          <figure class="proof"><img src="../../g/uh_stats.jpg" alt="Print das estatísticas do TikTok: 1,4 mi de visualizações, 158,4 mil curtidas, 26,2 mil compartilhamentos, 7,7 mil visitas ao perfil, 883 comentários"><figcaption>Dados reais do TikTok da UH Travel</figcaption></figure>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <section class="block" id="packages">
+    <div class="wrap">
+      <div class="head">
+        <div><p class="eyebrow">Pacotes</p><h2>Escolha o que faz sentido para você</h2></div>
+        <p>Todos os pacotes podem ser produzidos com produtos enviados ou durante uma hospedagem ou visita. Me chama para receber os valores.</p>
+      </div>
+      <div class="packs">
+        <article class="pack">
+          <span class="kicker">Para começar</span>
+          <h3>Vídeos UGC</h3>
+          <ul><li>1 vídeo (ideia, roteiro e edição)</li><li>3 vídeos com abordagens diferentes</li><li>5 vídeos com abordagens diferentes</li></ul>
+        </article>
+        <article class="pack feat">
+          <span class="kicker">Para anúncios</span>
+          <h3>Pacote de testes</h3>
+          <ul><li>2 ideias principais</li><li>4 hooks</li><li>2 CTAs</li><li>8 versões do vídeo</li></ul>
+          <p class="note">Para a sua equipe testar qual versão gera mais vendas ou reservas.</p>
+        </article>
+        <article class="pack">
+          <span class="kicker">Para completar</span>
+          <h3>Extras</h3>
+          <ul><li>Material bruto</li><li>3 a 5 hooks extras</li><li>Fotos UGC</li><li>Direito de uso em anúncios</li></ul>
+        </article>
+      </div>
+      <div class="packs-foot">
+        <a class="btn" href="#contact">Pedir orçamento</a>
+        <span>Precisa de conteúdo todo mês? Pergunte sobre os planos mensais.</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="block" id="contact">
+    <div class="wrap">
+      <div class="contact">
+        <div>
+          <p class="eyebrow">Contato</p>
+          <h2>Vamos criar <em>juntos?</em></h2>
+          <p>Me conta sobre a sua marca ou produto e onde você quer usar o conteúdo. Eu te respondo com ideias e um orçamento.</p>
+        </div>
+        <div class="mail">
+          <div class="addr" id="addr">laub.ugc@gmail.com</div>
+          <div class="addr">WhatsApp +49 173 5903536</div>
+          <div class="row">
+            <button class="btn" id="copy" type="button">Copiar e-mail</button>
+            <a class="btn light" href="https://www.instagram.com/lauraseeling/" target="_blank" rel="noopener">Instagram @lauraseeling</a>
+            <a class="btn light" href="https://www.tiktok.com/@uhstudioss" target="_blank" rel="noopener">TikTok @uhstudioss</a>
+            <a class="btn light" href="https://cooltravelistas.com" target="_blank" rel="noopener">Cool Travelistas</a>
+          </div>
+          <div class="copied" id="copied" aria-live="polite"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <span>© 2026 Laura Seeling</span>
+    <span>Rio de Janeiro, Brasil</span>
+  </div>
+</footer>
+
+<script>
+document.getElementById('copy').addEventListener('click', function(){
+  var el = document.getElementById('addr'), out = document.getElementById('copied');
+  function fallback(){
+    var r = document.createRange(); r.selectNodeContents(el);
+    var s = window.getSelection(); s.removeAllRanges(); s.addRange(r);
+    out.textContent = 'Selecionado. Aperte Ctrl+C ou ⌘C para copiar.';
+  }
+  try{ navigator.clipboard.writeText(el.textContent.trim()).then(function(){ out.textContent = 'E-mail copiado.'; }, fallback); }
+  catch(e){ fallback(); }
+});
+
+(function(){
+  var v=document.querySelector('.hero-bg'), b=document.getElementById('heroToggle');
+  if(!v||!b) return;
+  if(window.matchMedia && matchMedia('(prefers-reduced-motion: reduce)').matches){ v.removeAttribute('autoplay'); v.pause(); b.textContent='Reproduzir vídeo'; }
+  b.addEventListener('click',function(){ if(v.paused){ v.play(); b.textContent='Pausar vídeo'; } else { v.pause(); b.textContent='Reproduzir vídeo'; } });
+})();
+</script>
+
+</body>
+</html>
