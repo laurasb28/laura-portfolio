@@ -283,6 +283,14 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .hero-photo .note{position:absolute;right:-34px;bottom:64px;width:128px;padding:14px 12px 16px;background:#fff3a3;color:#282c4d;font-family:"Caveat",cursive;font-size:1.35rem;line-height:1.1;transform:rotate(8deg);box-shadow:0 10px 18px rgba(0,0,0,.25)}
 .hero-photo .note b{color:var(--pink);font-weight:700}
 @media (max-width:760px){.hero-photo{width:min(74vw,270px);justify-self:start;margin-left:6px}.hero-photo .note{right:-44px;width:112px;font-size:1.2rem}}
+.hero-photo .note{background:#ffd1e6!important}
+.hero-photo .note b{color:var(--blue)!important}
+.hero-photo .stamp{position:absolute;top:-34px;left:-40px;width:104px;height:104px;border-radius:50%;border:3px solid var(--blue);outline:1.5px solid var(--blue);outline-offset:-9px;background:rgba(255,255,255,.92);color:var(--blue);display:grid;place-content:center;text-align:center;transform:rotate(-14deg);font-family:var(--display);box-shadow:0 8px 16px rgba(0,0,0,.2)}
+.hero-photo .stamp small{display:block;font-size:.5rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase}
+.hero-photo .stamp strong{display:block;font-size:1.6rem;font-weight:700;line-height:1.05;margin:2px 0}
+.hero-photo .chip{position:absolute;left:-46px;bottom:150px;padding:8px 14px;border-radius:999px;background:#fff;color:#282c4d;font-family:"Caveat",cursive;font-size:1.3rem;font-weight:700;white-space:nowrap;transform:rotate(-6deg);box-shadow:0 8px 16px rgba(0,0,0,.25)}
+.hero-photo .chip.two{left:auto;right:-30px;top:40px;bottom:auto;background:var(--pink);color:#fff;transform:rotate(7deg)}
+@media (max-width:760px){.hero-photo .stamp{width:84px;height:84px;top:-26px;left:-14px}.hero-photo .stamp strong{font-size:1.3rem}.hero-photo .stamp small{font-size:.42rem}.hero-photo .chip{left:-10px;font-size:1.1rem}.hero-photo .chip.two{right:-40px}}
 </style>
 
 </head>
@@ -316,6 +324,9 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
       <figure class="hero-photo">
         <span class="tape" aria-hidden="true"></span>
         <img src="../g/laura_cafe.jpg" alt="Laura Seeling smiling at an outdoor café table">
+        <span class="stamp" aria-hidden="true"><strong>27</strong><small>countries</small><small>&amp; counting</small></span>
+        <span class="chip" aria-hidden="true">✈️ digital nomad</span>
+        <span class="chip two" aria-hidden="true">🎶 concert lover</span>
         <span class="note" aria-hidden="true">Hi! I'm your next <b>UGC creator</b> ♡</span>
       </figure>
     </div>
