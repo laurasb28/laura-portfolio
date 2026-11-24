@@ -291,6 +291,13 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
 .hero-photo .chip{position:absolute;left:-46px;bottom:150px;padding:8px 14px;border-radius:999px;background:#fff;color:#282c4d;font-family:"Caveat",cursive;font-size:1.3rem;font-weight:700;white-space:nowrap;transform:rotate(-6deg);box-shadow:0 8px 16px rgba(0,0,0,.25)}
 .hero-photo .chip.two{left:auto;right:-30px;top:40px;bottom:auto;background:var(--pink);color:#fff;transform:rotate(7deg)}
 @media (max-width:760px){.hero-photo .stamp{width:84px;height:84px;top:-26px;left:-14px}.hero-photo .stamp strong{font-size:1.3rem}.hero-photo .stamp small{font-size:.42rem}.hero-photo .chip{left:-10px;font-size:1.1rem}.hero-photo .chip.two{right:-40px}}
+.hero-split::before{display:none!important}
+.hero-photo .ticket{position:absolute;right:-40px;top:34px;transform:rotate(9deg);filter:drop-shadow(0 8px 10px rgba(0,0,0,.3))}
+.hero-photo .ticket span{display:flex;align-items:stretch;width:132px;height:58px;background:var(--pink);color:#fff;border-radius:6px;font-family:var(--display);-webkit-mask:radial-gradient(circle at left center,transparent 8px,#000 8.5px) left/51% 100% no-repeat,radial-gradient(circle at right center,transparent 8px,#000 8.5px) right/51% 100% no-repeat;mask:radial-gradient(circle at left center,transparent 8px,#000 8.5px) left/51% 100% no-repeat,radial-gradient(circle at right center,transparent 8px,#000 8.5px) right/51% 100% no-repeat}
+.hero-photo .ticket i{font-style:normal;display:grid;place-items:center;width:38px;border-right:2px dashed rgba(255,255,255,.75);font-size:1.15rem}
+.hero-photo .ticket b{flex:1;display:grid;align-content:center;padding-left:10px;line-height:1.05;font-size:.98rem;font-weight:700;letter-spacing:.04em}
+.hero-photo .ticket b small{font-size:.52rem;font-weight:600;letter-spacing:.16em;opacity:.9}
+@media (max-width:760px){.hero-photo .ticket{right:-34px;transform:rotate(9deg) scale(.88)}}
 </style>
 
 </head>
@@ -326,7 +333,7 @@ footer .wrap{display:flex;flex-wrap:wrap;justify-content:space-between;gap:12px;
         <img src="../g/laura_cafe.jpg" alt="Laura Seeling smiling at an outdoor café table">
         <span class="stamp" aria-hidden="true"><strong>27</strong><small>countries</small><small>&amp; counting</small></span>
         <span class="chip" aria-hidden="true">✈️ digital nomad</span>
-        <span class="chip two" aria-hidden="true">🎶 concert lover</span>
+        <span class="ticket" aria-hidden="true"><span><i>♪</i><b><small>ADMIT ONE</small>LIVE SHOW</b></span></span>
         <span class="note" aria-hidden="true">Hi! I'm your next <b>UGC creator</b> ♡</span>
       </figure>
     </div>
